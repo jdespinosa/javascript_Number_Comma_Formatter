@@ -5,7 +5,7 @@ function formatVal(val)
 	var dVal = ( val.indexOf('.') == -1 ? '' : val.split('.')[1]);
 	
 	// format whole no. comp
-	return vBuff + ( dVal != '' ? '.' + dVal : '' );
+	var vBuff = ( dVal != '' ? '.' + dVal : '' );
 	var dCount = 0;
 	for(var i=wVal.length-1; i>=0; i--){
 		vBuff = wVal.charAt(i) + vBuff;
@@ -15,4 +15,6 @@ function formatVal(val)
 			dCount = 0;
 		}
 	}
+	
+	return vBuff;
 }
